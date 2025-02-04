@@ -1,0 +1,26 @@
+Glass Break Identification System – Workflow
+
+1. Audio Signal Acquisition (Input Stage)
+
+MAX2244 Audio Sensor captures sound waves.
+Converts analog sound signals to digital using STM32’s ADC.
+
+2. Preprocessing & Feature Extraction
+
+Filters noise and extracts key features from the audio.
+Converts time-domain data into frequency-domain features.
+
+3. Machine Learning Classification (NanoEdge AI)
+
+The ZVM model (NanoEdge AI) classifies sounds into:
+Shattering (Complete glass break)
+Breaking (Partial break or cracks forming)
+Cracking (Small stress fractures)
+Runs directly on the STM32 microcontroller.
+
+4. Output & Alerts
+
+STM32 Console displays the identified sound type.
+Can trigger an alarm or notification for security systems.
+
+This system enables real-time glass break detection with low power consumption.
